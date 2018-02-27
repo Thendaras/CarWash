@@ -58,8 +58,9 @@
     <Compile Include="Entities\Process.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entities\WashType.cs" />
-    <Compile Include="Repositories\FacilityRepository.cs" />
+    <Compile Include="Repositories\Facility\FacilityRepository.cs" />
     <Compile Include="Repositories\IBaseRepository.cs" />
+    <Compile Include="Repositories\Order\OrderRepository.cs" />
     <Compile Include="Repositories\Process\IProcessRepository.cs" />
     <Compile Include="Repositories\Process\ProcessRepository.cs" />
     <Compile Include="Repositories\Process\ProcessRepositoryMock.cs" />
@@ -67,9 +68,6 @@
     <Compile Include="Repositories\WashType\WashTypeRepository.cs" />
     <Compile Include="Repositories\WashType\WashTypeRepositoryMock.cs" />
     <Compile Include="Services\ProcessService.cs" />
-    <Compile Include="Repositories\OrderRepository.cs" />
-    <Compile Include="Repositories\ProcessRepository.cs" />
-    <Compile Include="Repositories\WashTypeRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
