@@ -3,19 +3,17 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CarWash.Repositories
 {
-    public class WashTypeRepository : IBaseRepository<WashType>
+    public class FacilityRepository : IBaseRepository<Facility>
     {
-        public bool Create(WashType washType)
+        public bool Create(Facility facility)
         {
             var db = new CarWashContext();
             try
             {
-                db.WashTypes.Add(washType);
+                db.Facilities.Add(facility);
                 return true;
             }
             catch (Exception)
@@ -28,17 +26,17 @@ namespace CarWash.Repositories
             }
         }
 
-        public bool Delete(WashType washType)
+        public bool Delete(Facility facility)
         {
             var db = new CarWashContext();
 
             try
             {
-                var washTypeObj = db.WashTypes.FirstOrDefault(x => x.ID == washType.ID);
+                var facilityObj = db.Facilities.FirstOrDefault(x => x.ID == facility.ID);
 
-                if (washTypeObj != null)
+                if (facilityObj != null)
                 {
-                    db.WashTypes.Remove(washTypeObj);
+                    db.Facilities.Remove(facilityObj);
                     db.SaveChanges();
                 }
                 return true;
@@ -53,13 +51,13 @@ namespace CarWash.Repositories
             }
         }
 
-        public WashType Read(int id)
+        public Facility Read(int id)
         {
             var db = new CarWashContext();
 
             try
             {
-                return db.WashTypes.AsNoTracking().FirstOrDefault(x => x.ID == id);
+                return db.Facilities.AsNoTracking().FirstOrDefault(x => x.ID == id);
             }
             catch (Exception)
             {
@@ -71,13 +69,13 @@ namespace CarWash.Repositories
             }
         }
 
-        public List<WashType> ReadAll()
+        public List<Facility> ReadAll()
         {
             var db = new CarWashContext();
 
             try
             {
-                return db.WashTypes.AsNoTracking().ToList();
+                return db.Facilities.AsNoTracking().ToList();
             }
             catch (Exception)
             {
@@ -89,13 +87,13 @@ namespace CarWash.Repositories
             }
         }
 
-        public bool Update(WashType washType)
+        public bool Update(Facility facility)
         {
             var db = new CarWashContext();
 
             try
             {
-                db.Entry(washType).State = EntityState.Modified;
+                db.Entry(facility).State = EntityState.Modified;
                 db.SaveChanges();
                 return true;
             }

@@ -7,8 +7,8 @@
     <ProjectGuid>{4F40D61F-2D6F-4B35-B211-09325375CAE8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CarWash.API</RootNamespace>
-    <AssemblyName>CarWash.API</AssemblyName>
+    <RootNamespace>CarWash</RootNamespace>
+    <AssemblyName>CarWash</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -50,11 +50,15 @@
     <Compile Include="CarWash.cs" />
     <Compile Include="Entities\BaseEntity.cs" />
     <Compile Include="Entities\CarWashContext.cs" />
+    <Compile Include="Entities\Facility.cs" />
     <Compile Include="Entities\Order.cs" />
     <Compile Include="Entities\Process.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entities\WashType.cs" />
+    <Compile Include="Repositories\FacilityRepository.cs" />
     <Compile Include="Repositories\IBaseRepository.cs" />
+    <Compile Include="Repositories\OrderRepository.cs" />
+    <Compile Include="Repositories\ProcessRepository.cs" />
     <Compile Include="Repositories\WashTypeRepository.cs" />
   </ItemGroup>
   <ItemGroup>

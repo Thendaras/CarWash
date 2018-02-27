@@ -1,6 +1,6 @@
 ﻿using System.Data.Entity;
 
-namespace CarWash.API.Entities
+namespace CarWash.Entities
 {
     public class CarWashContext : DbContext
     {
@@ -8,7 +8,9 @@ namespace CarWash.API.Entities
         {
         }
 
-        public DbSet<Process> Steps { get; set; }
+        public DbSet<Facility> Facilities { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<Process> Processes { get; set; }
         public DbSet<WashType> WashTypes { get; set; }
     }
 }
