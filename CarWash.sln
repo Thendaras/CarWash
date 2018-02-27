@@ -5,7 +5,9 @@ VisualStudioVersion = 15.0.27130.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarWash", "CarWash.API\CarWash.csproj", "{4F40D61F-2D6F-4B35-B211-09325375CAE8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarWash.Debug", "CarWash.Debug\CarWash.Debug.csproj", "{B460497D-32F2-4C5A-9881-72448BECA232}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarWash.Debug", "CarWash.Debug\CarWash.Debug.csproj", "{B460497D-32F2-4C5A-9881-72448BECA232}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarWash.gui", "CarWash.gui\CarWash.gui.csproj", "{60B631EE-5209-413D-BDCF-55353025574B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{B460497D-32F2-4C5A-9881-72448BECA232}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B460497D-32F2-4C5A-9881-72448BECA232}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B460497D-32F2-4C5A-9881-72448BECA232}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60B631EE-5209-413D-BDCF-55353025574B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60B631EE-5209-413D-BDCF-55353025574B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60B631EE-5209-413D-BDCF-55353025574B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60B631EE-5209-413D-BDCF-55353025574B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
