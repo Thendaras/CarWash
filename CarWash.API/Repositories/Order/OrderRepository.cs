@@ -1,5 +1,4 @@
-﻿using CarWash.API.Repositories.Process;
-using CarWash.Entities;
+﻿using CarWash.Entities;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -7,14 +6,14 @@ using System.Linq;
 
 namespace CarWash.Repositories
 {
-    public class ProcessRepository : IProcessRepository
+    public class OrderRepository : IBaseRepository<Order>
     {
-        public bool Create(Process process)
+        public bool Create(Order order)
         {
             var db = new CarWashContext();
             try
             {
-                db.Processes.Add(process);
+                db.Orders.Add(order);
                 return true;
             }
             catch (Exception)
@@ -27,17 +26,17 @@ namespace CarWash.Repositories
             }
         }
 
-        public bool Delete(Process process)
+        public bool Delete(Order order)
         {
             var db = new CarWashContext();
 
             try
             {
-                var processObj = db.Processes.FirstOrDefault(x => x.ID == process.ID);
+                var orderObj = db.Orders.FirstOrDefault(x => x.ID == order.ID);
 
-                if (processObj != null)
+                if (orderObj != null)
                 {
-                    db.Processes.Remove(processObj);
+                    db.Orders.Remove(orderObj);
                     db.SaveChanges();
                 }
                 return true;
@@ -52,13 +51,13 @@ namespace CarWash.Repositories
             }
         }
 
-        public Process Read(int id)
+        public Order Read(int id)
         {
             var db = new CarWashContext();
 
             try
             {
-                return db.Processes.AsNoTracking().FirstOrDefault(x => x.ID == id);
+                return db.Orders.AsNoTracking().FirstOrDefault(x => x.ID == id);
             }
             catch (Exception)
             {
@@ -70,13 +69,13 @@ namespace CarWash.Repositories
             }
         }
 
-        public List<Process> ReadAll()
+        public List<Order> ReadAll()
         {
             var db = new CarWashContext();
 
             try
             {
-                return db.Processes.AsNoTracking().ToList();
+                return db.Orders.AsNoTracking().ToList();
             }
             catch (Exception)
             {
@@ -88,13 +87,13 @@ namespace CarWash.Repositories
             }
         }
 
-        public bool Update(Process process)
+        public bool Update(Order order)
         {
             var db = new CarWashContext();
 
             try
             {
-                db.Entry(process).State = EntityState.Modified;
+                db.Entry(order).State = EntityState.Modified;
                 db.SaveChanges();
                 return true;
             }

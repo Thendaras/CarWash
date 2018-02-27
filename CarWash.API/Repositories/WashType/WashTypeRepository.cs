@@ -1,5 +1,3 @@
-﻿using CarWash.API.Repositories.WashType;
-using CarWash.Entities;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -8,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace CarWash.Repositories.WashType
+
 {
     public class WashTypeRepository : IWashTypeRepository
     {
@@ -80,7 +79,7 @@ namespace CarWash.Repositories.WashType
             {
                 return db.WashTypes.AsNoTracking().ToList();
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return null;
             }
@@ -100,7 +99,7 @@ namespace CarWash.Repositories.WashType
                 db.SaveChanges();
                 return true;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return false;
             }
