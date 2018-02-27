@@ -1,4 +1,4 @@
-﻿using CarWash.API.Repositories.Process;
+﻿using CarWash.Repositories.Process;
 using CarWash.Entities;
 using CarWash.Repositories;
 using System;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarWash.API.Repositories.WashType
+namespace CarWash.Repositories.WashType
 {
     public class WashTypeRepositoryMock : IWashTypeRepository
     {

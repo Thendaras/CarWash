@@ -1,9 +1,8 @@
-﻿using CarWash.Api;
-using CarWash.API.Api;
-using CarWash.API.Repositories;
-using CarWash.API.Repositories.Process;
-using CarWash.API.Repositories.WashType;
+﻿using CarWash;
+using CarWash.Api;
 using CarWash.Repositories;
+using CarWash.Repositories.Process;
+using CarWash.Repositories.WashType;
 using CarWash.Services;
 using System;
 using System.Threading;

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using CarWash.API.Api;
-using CarWash.API.Repositories;
-using CarWash.API.Repositories.Process;
+using CarWash.Api;
+using CarWash.Repositories;
+using CarWash.Repositories.Process;
 using CarWash.Entities;
 using CarWash.Repositories;
 

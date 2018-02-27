@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarWash.API.Repositories.WashType
+namespace CarWash.Repositories.WashType
 {
     public interface IWashTypeRepository : IBaseRepository<Entities.WashType>
     {
