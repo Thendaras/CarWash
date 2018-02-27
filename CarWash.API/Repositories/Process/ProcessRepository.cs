@@ -9,7 +9,7 @@ namespace CarWash.Repositories
 {
     public class ProcessRepository : IProcessRepository
     {
-        public bool Create(Process process)
+        public bool Create(Entities.Process process)
         {
             var db = new CarWashContext();
             try
@@ -27,7 +27,7 @@ namespace CarWash.Repositories
             }
         }
 
-        public bool Delete(Process process)
+        public bool Delete(Entities.Process process)
         {
             var db = new CarWashContext();
 
@@ -52,7 +52,7 @@ namespace CarWash.Repositories
             }
         }
 
-        public Process Read(int id)
+        public Entities.Process Read(int id)
         {
             var db = new CarWashContext();
 
@@ -70,7 +70,7 @@ namespace CarWash.Repositories
             }
         }
 
-        public List<Process> ReadAll()
+        public List<Entities.Process> ReadAll()
         {
             var db = new CarWashContext();
 
@@ -88,7 +88,7 @@ namespace CarWash.Repositories
             }
         }
 
-        public bool Update(Process process)
+        public bool Update(Entities.Process process)
         {
             var db = new CarWashContext();
 
