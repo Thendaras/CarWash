@@ -9,7 +9,7 @@ namespace CarWash.API.Repositories
 {
     public interface IBaseRepository<Entity>
     {
-        bool Create();
+        bool Create(Entity entity);
         Entity Read(int id);
         List<Entity> ReadAll();
         bool Update(Entity entity);
