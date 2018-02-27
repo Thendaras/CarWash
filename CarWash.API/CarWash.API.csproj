@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API\UserControl.cs" />
     <Compile Include="CarWash.cs" />
     <Compile Include="Entities\BaseEntity.cs" />
     <Compile Include="Entities\CarWashContext.cs" />
@@ -54,6 +55,8 @@
     <Compile Include="Entities\Process.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entities\WashType.cs" />
+    <Compile Include="Repositories\IBaseRepository.cs" />
+    <Compile Include="Repositories\WashTypeRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
