@@ -1,4 +1,5 @@
-﻿using CarWash.API.Entities;
+﻿using CarWash.API.Repositories.WashType;
+using CarWash.Entities;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -6,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarWash.API.Repositories
+namespace CarWash.Repositories.WashType
 {
-    public class WashTypeRepository : IBaseRepository<WashType>
+    public class WashTypeRepository : IWashTypeRepository
     {
-        public bool Create(WashType washType)
+        public bool Create(Entities.WashType washType)
         {
             var db = new CarWashContext();
             try
@@ -27,8 +28,7 @@ namespace CarWash.API.Repositories
                 db.Dispose();
             }
         }
-
-        public bool Delete(WashType washType)
+        public bool Delete(Entities.WashType washType)
         {
             var db = new CarWashContext();
 
@@ -53,7 +53,7 @@ namespace CarWash.API.Repositories
             }
         }
 
-        public WashType Read(int id)
+        public Entities.WashType Read(int id)
         {
             var db = new CarWashContext();
 
@@ -71,7 +71,8 @@ namespace CarWash.API.Repositories
             }
         }
 
-        public List<WashType> ReadAll()
+
+        public List<Entities.WashType> ReadAll()
         {
             var db = new CarWashContext();
 
@@ -89,7 +90,7 @@ namespace CarWash.API.Repositories
             }
         }
 
-        public bool Update(WashType washType)
+        public bool Update(Entities.WashType washType)
         {
             var db = new CarWashContext();
 

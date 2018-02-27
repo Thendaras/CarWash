@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarWash.API.Entities
+namespace CarWash.Entities
 {
     public class BaseEntity
     {

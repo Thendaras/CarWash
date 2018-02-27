@@ -1,6 +1,6 @@
 ﻿using System.Data.Entity;
 
-namespace CarWash.API.Entities
+namespace CarWash.Entities
 {
     public class CarWashContext : DbContext
     {

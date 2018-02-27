@@ -5,7 +5,7 @@ using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarWash.API.Repositories
+namespace CarWash.Repositories
 {
     public interface IBaseRepository<Entity>
     {

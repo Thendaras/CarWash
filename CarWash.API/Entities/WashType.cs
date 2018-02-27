@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace CarWash.API.Entities
+namespace CarWash.Entities
 {
     public class WashType : BaseEntity
     {
