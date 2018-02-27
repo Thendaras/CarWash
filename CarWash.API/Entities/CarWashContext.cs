@@ -9,6 +9,6 @@ namespace CarWash.API.Entities
         }
 
         public DbSet<Process> Steps { get; set; }
-        public DbSet<WashType> Washes { get; set; }
+        public DbSet<WashType> WashTypes { get; set; }
     }
 }
