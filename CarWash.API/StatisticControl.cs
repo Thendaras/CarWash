@@ -17,7 +17,7 @@ namespace CarWash
             _orderRepository = orderRepository;
         }
 
-        public void ShowStatistics()
+        public async Task<string> ShowStatistics()
         {
             List<Order> orders = _orderRepository.ReadAll();
 
@@ -29,7 +29,11 @@ namespace CarWash
                 earnings += order.Price;
             }
 
-            Console.WriteLine($"There is a total of {ordersAmount} orders, and {earnings} in earnings.");
+            var aes = new AesEncryption();
+            var key = aes.GenerateRandomNumber(32);
+            var iv = aes.GenerateRandomNumber(16);
+
+            string statistic = String.Format($"There is a total of {ordersAmount} orders, and {earnings} in earnings.");
         }
     }
 }

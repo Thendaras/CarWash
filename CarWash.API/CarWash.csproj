@@ -51,6 +51,7 @@
     <Compile Include="Api\WashProgress.cs" />
     <Compile Include="Api\WashTypeControl.cs" />
     <Compile Include="CarWash.cs" />
+    <Compile Include="AesEncryption.cs" />
     <Compile Include="Entities\BaseEntity.cs" />
     <Compile Include="Entities\CarWashContext.cs" />
     <Compile Include="Entities\Facility.cs" />
