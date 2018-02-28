@@ -37,7 +37,7 @@ namespace CarWash.Debug
 
         private ProcessService _processService;
 
-        private UserControl _userControl;
+        private WashControl _userControl;
         private WashTypeControl _washTypeControl;
         
         public Debug()
@@ -47,13 +47,13 @@ namespace CarWash.Debug
 
             _processService = new ProcessService(_processRepository);
 
-            _userControl = new UserControl(_processService);
+            //_userControl = new WashControl(_processService);
             _washTypeControl = new WashTypeControl(_washTypeRepository);
         }
 
         public async Task Run()
         {
-            await _userControl.StartWash(_washTypeRepository.Read(1));
+            //await _userControl.StartWash(_washTypeRepository.Read(1));
         }
     }
 }

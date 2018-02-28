@@ -10,6 +10,7 @@ namespace CarWash.Api
     {
         public int CurrentProgress { get; set; }
         public int MaxProgress { get; set; }
+        public string Name { get; set; }
     }
 }
 

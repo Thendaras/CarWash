@@ -24,7 +24,8 @@ namespace CarWash.Repositories
         {
             return new Entities.Process
             {
-                Duration = 10000
+                Duration = 10000,
+                Name = "Forvask"
             };
         }
 
@@ -32,7 +33,8 @@ namespace CarWash.Repositories
         {
             return new List<Entities.Process>
             {
-                new Entities.Process{Duration = 10000}
+                new Entities.Process{Name = "Forvask", Duration = 10000},
+                new Entities.Process{Name = "Skyldning", Duration = 2000}
             };
         }
 

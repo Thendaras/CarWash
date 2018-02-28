@@ -1,4 +1,5 @@
 ﻿using CarWash.Entities;
+using CarWash.Repositories.Facility;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -6,9 +7,9 @@ using System.Linq;
 
 namespace CarWash.Repositories
 {
-    public class FacilityRepository : IBaseRepository<Facility>
+    public class FacilityRepository : IFacilityRepository
     {
-        public bool Create(Facility facility)
+        public bool Create(Entities.Facility facility)
         {
             var db = new CarWashContext();
             try
@@ -27,7 +28,7 @@ namespace CarWash.Repositories
             }
         }
 
-        public bool Delete(Facility facility)
+        public bool Delete(Entities.Facility facility)
         {
             var db = new CarWashContext();
 
@@ -52,7 +53,7 @@ namespace CarWash.Repositories
             }
         }
 
-        public Facility Read(int id)
+        public Entities.Facility Read(int id)
         {
             var db = new CarWashContext();
 
@@ -70,7 +71,7 @@ namespace CarWash.Repositories
             }
         }
 
-        public List<Facility> ReadAll()
+        public List<Entities.Facility> ReadAll()
         {
             var db = new CarWashContext();
 
@@ -88,7 +89,7 @@ namespace CarWash.Repositories
             }
         }
 
-        public bool Update(Facility facility)
+        public bool Update(Entities.Facility facility)
         {
             var db = new CarWashContext();
 

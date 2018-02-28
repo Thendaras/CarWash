@@ -18,15 +18,14 @@ namespace CarWash.Services
         {
             _processRepository = processRepository;
         }
-        public Task StartProcess(int duration, CancellationToken ct, IProgress<WashProgress> progressObserver)
+        public Task StartProcess(Process process, IProgress<WashProgress> progressObserver)
         {
             return Task.Factory.StartNew(() =>
             {
-                    for (int i = 0; i <= duration; i+=10)
+                    for (int i = 0; i <= process.Duration; i+=100)
                     {
-                        ct.ThrowIfCancellationRequested();
-                        progressObserver.Report(new WashProgress{ CurrentProgress = i, MaxProgress = duration});
-                        Thread.Sleep(10);
+                        progressObserver.Report(new WashProgress{ CurrentProgress = i, MaxProgress = process.Duration, Name = process.Name});
+                        Thread.Sleep(100);
                     }
             });
         }

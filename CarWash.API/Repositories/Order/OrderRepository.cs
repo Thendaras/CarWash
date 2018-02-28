@@ -1,4 +1,5 @@
 ﻿using CarWash.Entities;
+using CarWash.Repositories.Order;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -6,9 +7,9 @@ using System.Linq;
 
 namespace CarWash.Repositories
 {
-    public class OrderRepository : IBaseRepository<Order>
+    public class OrderRepository : IOrderRepository
     {
-        public bool Create(Order order)
+        public bool Create(Entities.Order order)
         {
             var db = new CarWashContext();
             try
@@ -27,7 +28,7 @@ namespace CarWash.Repositories
             }
         }
 
-        public bool Delete(Order order)
+        public bool Delete(Entities.Order order)
         {
             var db = new CarWashContext();
 
@@ -52,7 +53,7 @@ namespace CarWash.Repositories
             }
         }
 
-        public Order Read(int id)
+        public Entities.Order Read(int id)
         {
             var db = new CarWashContext();
 
@@ -70,7 +71,7 @@ namespace CarWash.Repositories
             }
         }
 
-        public List<Order> ReadAll()
+        public List<Entities.Order> ReadAll()
         {
             var db = new CarWashContext();
 
@@ -88,7 +89,7 @@ namespace CarWash.Repositories
             }
         }
 
-        public bool Update(Order order)
+        public bool Update(Entities.Order order)
         {
             var db = new CarWashContext();
 
