@@ -4,7 +4,7 @@ namespace CarWash.Entities
 {
     public class CarWashContext : DbContext
     {
-        public CarWashContext() : base("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=WingtipToys;Integrated Security=True;Pooling=False")
+        public CarWashContext() : base("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=CarWash;Integrated Security=True;Pooling=False")
         {
         }
 

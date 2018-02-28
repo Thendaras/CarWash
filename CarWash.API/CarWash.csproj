@@ -56,6 +56,19 @@
     <Compile Include="Entities\Facility.cs" />
     <Compile Include="Entities\Order.cs" />
     <Compile Include="Entities\Process.cs" />
+    <Compile Include="Migrations\201802271348471_InitialDatabaseCreation.cs" />
+    <Compile Include="Migrations\201802271348471_InitialDatabaseCreation.Designer.cs">
+      <DependentUpon>201802271348471_InitialDatabaseCreation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802280758518_AddedStatisticControl.cs" />
+    <Compile Include="Migrations\201802280758518_AddedStatisticControl.Designer.cs">
+      <DependentUpon>201802280758518_AddedStatisticControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802280857007_Changes.cs" />
+    <Compile Include="Migrations\201802280857007_Changes.Designer.cs">
+      <DependentUpon>201802280857007_Changes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entities\WashType.cs" />
     <Compile Include="Repositories\Facility\FacilityRepository.cs" />
@@ -68,10 +81,22 @@
     <Compile Include="Repositories\WashType\WashTypeRepository.cs" />
     <Compile Include="Repositories\WashType\WashTypeRepositoryMock.cs" />
     <Compile Include="Services\ProcessService.cs" />
+    <Compile Include="StatisticControl.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201802271348471_InitialDatabaseCreation.resx">
+      <DependentUpon>201802271348471_InitialDatabaseCreation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802280758518_AddedStatisticControl.resx">
+      <DependentUpon>201802280758518_AddedStatisticControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802280857007_Changes.resx">
+      <DependentUpon>201802280857007_Changes.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -12,11 +12,18 @@ namespace CarWash.Debug
 {
     class Program
     {
-
         static void Main(string[] args)
         {
-            Debug debug = new Debug();
-            debug.Run().Wait();
+            FacilityRepository facilityRepository = new FacilityRepository();
+            ProcessRepository processRepository = new ProcessRepository();
+            WashTypeRepository washTypeRepository = new WashTypeRepository();
+
+            CarWash carWash = new CarWash(washTypeRepository, processRepository, facilityRepository);
+
+            carWash.CreateDatabaseData();
+
+            //Debug debug = new Debug();
+            //debug.Run().Wait();
             Console.WriteLine("Tasks completed");
         }
 

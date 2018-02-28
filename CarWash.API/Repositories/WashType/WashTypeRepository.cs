@@ -17,6 +17,7 @@ namespace CarWash.Repositories.WashType
             try
             {
                 db.WashTypes.Add(washType);
+                db.SaveChanges();
                 return true;
             }
             catch (Exception)

@@ -15,6 +15,7 @@ namespace CarWash.Repositories
             try
             {
                 db.Processes.Add(process);
+                db.SaveChanges();
                 return true;
             }
             catch (Exception)
